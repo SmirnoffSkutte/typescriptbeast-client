@@ -1,0 +1,7 @@
+.mainWrapper{
+    @apply mx-auto;
+    width: 88%;
+    @media screen and (max-width:720px) {
+        @apply w-full;
+        }
+}

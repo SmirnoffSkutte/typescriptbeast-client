@@ -1,0 +1,55 @@
+.favorites {
+	@apply grid grid-cols-3 mt-8;
+	column-gap: 15px;
+	@media screen and (max-width:576px) {
+		@apply grid-cols-1;
+		}
+	@media screen and (min-width:577px) {
+		@apply grid-cols-2;
+		}
+	@media screen and (min-width:960px) {
+		@apply grid-cols-3;
+		}
+}
+
+.containerLoader {
+	@apply w-full flex flex-wrap;
+
+	.skeletonLoader {
+		@apply relative mb-8 h-44;
+		width: 31%;
+
+		&:nth-child(1),
+		&:nth-child(3) {
+			@apply mr-8;
+		}
+	}
+}
+
+.itemWrapper {
+	@apply relative mb-8 h-44 mr-8 animate-fade;
+	width: 100%;
+
+	&:nth-child(3n) {
+		@apply mr-0;
+	}
+
+	.item {
+		@apply relative z-1 w-full h-full flex items-end shadow-lg rounded-layout overflow-hidden;
+		&::before {
+			@apply z-2;
+		}
+
+		img {
+			@apply image-like-bg;
+		}
+
+		.title {
+			@apply relative z-3 text-center m-4 w-full font-semibold text-white text-shadow;
+		}
+	}
+
+	> button {
+		@apply z-3 block -left-3 -top-1 right-auto;
+	}
+}

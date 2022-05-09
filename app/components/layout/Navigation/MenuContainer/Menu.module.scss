@@ -1,0 +1,124 @@
+.menu {
+	@apply animate-fade flex flex-col ml-1 ;
+
+	.heading {
+		@apply text-orange-300 uppercase text-xs font-semibold;
+	}
+
+	&:focus {
+		cursor: pointer;
+		.submenu {
+			display: block;
+			pointer-events: auto;
+		}
+    }
+
+	&:hover {
+		cursor: pointer;
+		// .submenu {
+		// 	display: block;
+		// 	pointer-events: auto;
+		// }
+    }
+
+	.none{
+		display: none;
+	}
+
+	.submenu {
+		@apply pointer-events-none border-primary border-2 z-40 bg-black;
+        transition: .3s;
+		display: block;
+        pointer-events: auto;
+        -webkit-transition: .3s;
+        -moz-transition: .3s;
+        -ms-transition: .3s;
+        -o-transition: .3s;
+		position: relative;
+		top:0;
+		// top:15;
+		
+			> li {
+				@apply px-8 border-r-4 border-r-transparent transition-colors;
+				position: relative;
+				top:0;
+				> a {
+					@apply flex items-center text-white px-3 mt-6 cursor-pointer;
+					> span {
+						@apply ml-3 text-lg hover:text-primary;
+					}
+					> svg {
+						@apply text-2lg;
+					}
+					> span,
+					> svg {
+						@apply transition-colors;
+					}
+				}
+				&.active {
+					@apply border-r-primary;
+					> a > span {
+						@apply text-white;
+					}
+					> a > svg {
+						@apply fill-primary;
+					}
+				}
+			}
+
+			> li:last-child{
+				margin-bottom: 1.5rem;
+			}
+    
+	}
+	.ul {
+		> li {
+			@apply border-r-4 border-r-transparent transition-colors;
+			> a {
+				@apply flex items-center text-gray-600 px-3 mt-6 cursor-pointer;
+
+				> span {
+					@apply ml-3 text-lg hover:text-white;
+				}
+
+				> svg {
+					@apply text-2lg;
+				}
+
+				> span,
+				> svg {
+					@apply transition-colors;
+				}
+			}
+
+			&.active {
+				@apply border-r-primary;
+				> a > span {
+					@apply text-white;
+				}
+
+				> a > svg {
+					@apply fill-primary;
+				}
+			}
+		}
+	}
+}
+
+// .menu:hover{
+
+// }
+
+.menusFlex{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	
+}
+
+.heading {
+	@apply text-orange-300 uppercase text-9xl font-semibold  flex justify-center border-2 border-primary;
+}
+
+.actor{
+	@apply text-orange-300 uppercase text-xs font-semibold  flex justify-center border-2 border-primary
+}

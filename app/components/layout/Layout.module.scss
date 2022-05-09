@@ -1,0 +1,14 @@
+.layout{
+    @apply relative;
+
+    >div:first-child{
+        @apply h-24 border-b-gray-900 
+    }
+
+    .center{
+        @apply p-layout; 
+        @media screen and (max-width:720px) {
+            @apply p-0 pt-layout;
+            }
+    }
+}

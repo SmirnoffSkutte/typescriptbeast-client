@@ -1,0 +1,93 @@
+.mainwrapper{
+    @apply flex justify-center
+}
+.wrapper {
+	@apply  rounded-2xl overflow-hidden shadow-xl relative animate-fade rounded-b-none;
+    width: 100%;
+
+	.controls {
+		@apply flex-center-between absolute bottom-3 left-6 right-6;
+
+		> div:first-child {
+			@apply flex-center-between;
+
+			> button {
+				@apply text-2xl text-white mr-3 outline-none opacity-60 hover:opacity-100 transition-opacity;
+			}
+
+			.playButton {
+				@apply text-xl;
+			}
+
+			.timeControls {
+				@apply flex items-center text-white ml-4 ;
+
+				> p:nth-child(2) {
+					@apply mx-2;
+				}
+			}
+		}
+
+		> div:last-child {
+			@apply flex items-center;
+
+			> button {
+				@apply text-white text-3xl outline-none opacity-60 hover:opacity-100 transition-opacity;
+			}
+		}
+	}
+
+	.progressBarContainer {
+		@apply absolute  bottom-14 bg-gray-600 rounded-layout h-3;
+        // left-4 right-4
+		width: calc(100%);
+
+		.progressBar {
+			@apply rounded-2xl h-full bg-white;
+		}
+	}
+
+	.playCenterButton{
+		position: absolute;
+		color: orange;
+		margin: auto;
+		position: absolute;
+		top: 0; left: 0; bottom: 0; right: 0;
+		cursor: pointer;
+		font-size: 4rem;
+		line-height: 4rem;
+	}
+
+	//   button[name="play"] {
+	// 	@media screen and (max-width:720px) {
+	// 		width: 30px;
+	// 		height: 30px;
+	// 		}
+	// 	position: absolute;
+	// 	top:50%;
+	// 	left: 47%;
+	// 	width: 50px;
+	// 	height: 50px;
+	// 	background: orange;
+	// 	border: none;
+	// 	border-radius: 100%;
+	// 	margin: auto;
+	// 	cursor: pointer;
+	//   }
+	//   button[name="play"]:focus {
+	// 	outline: 0;
+	// 	border: 1px solid hsl(210, 58%, 69%);
+	// 	box-shadow: 0 0 0 3px hsla(210, 76%, 57%, 0.5);
+	//   }
+	  
+	//   button[name="play"]::after {
+	// 	content: '';
+	// 	display: inline-block;
+	// 	position: relative;
+	// 	top: 1px;
+	// 	left: 3px;
+	// 	border-style: solid;
+	// 	border-width: 10px 0 10px 20px;
+	// 	border-color: transparent transparent transparent white;
+	//   }
+}

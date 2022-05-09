@@ -4,11 +4,11 @@ import { INavItem } from './admin-navigation.interface'
 
 export const navItems: INavItem[] = [
 	{
-		title: 'Статистика',
+		title: 'Stats',
 		link: getAdminHomeUrl(),
 	},
 	{
-		title: 'Пользователи',
+		title: 'Users',
 		link: getAdminUrl('users'),
 	},
 	{

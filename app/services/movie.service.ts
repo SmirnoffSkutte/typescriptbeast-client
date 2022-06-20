@@ -68,7 +68,7 @@ export const MovieService = {
 	},
 
 	async getMoviesNoPages(searchTerm?: string) {
-		return axiosClassic.get<IMovie[]>(getMoviesUrl(``), {
+		return axiosClassic.get<IMovie[]>(getMoviesUrl(`/no-pages`), {
 			params: searchTerm
 			? {
 					searchTerm,

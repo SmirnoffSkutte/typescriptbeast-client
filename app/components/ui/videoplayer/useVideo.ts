@@ -6,6 +6,7 @@ export const useVideo = () => {
 
 	const [isPlaying, setIsPlaying] = useState(false)
 	const [currentTime, setCurrentTime] = useState(0)
+	const [volume,SetVolume]=useState(0)
 	const [videoTime, setVideoTime] = useState(0)
 	const [progress, setProgress] = useState(0)
 
@@ -35,6 +36,10 @@ export const useVideo = () => {
 		if (videoRef.current) videoRef.current.currentTime = click
 	}
 
+	const changeVolume=(rangeValue:number)=>{
+		if (videoRef.current) videoRef.current.volume=rangeValue
+	}
+
 	const fullScreen = () => {
 		const video = videoRef.current
 
@@ -54,16 +59,6 @@ export const useVideo = () => {
 				video.webkitRequestFullscreen()
 				toggleVideo()
 			}
-
-		// if (video.requestFullscreen) {
-		// 	video.requestFullscreen()
-		// } else if (video.msRequestFullscreen) {
-		// 	video.msRequestFullscreen()
-		// } else if (video.mozRequestFullScreen) {
-		// 	video.mozRequestFullScreen()
-		// } else if (video.webkitRequestFullscreen) {
-		// 	video.webkitRequestFullscreen()
-		// }
 	}
 
 	const fullScreenPlay = (isFirstOpen:boolean) => {
@@ -163,16 +158,18 @@ export const useVideo = () => {
 				revert,
 				fastForward,
 				toggleVideo,
-				changeTime
+				changeTime,
+				changeVolume
 			},
 			video: {
 				isPlaying,
 				currentTime,
 				progress,
 				videoTime,
+				volume
 			},
 		}),
-		[currentTime, progress, isPlaying, videoTime, toggleVideo]
+		[currentTime, progress, isPlaying, videoTime,volume, toggleVideo]
 	)
 
 	return value

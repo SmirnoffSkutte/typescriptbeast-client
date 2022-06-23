@@ -17,7 +17,7 @@ const SingleMovie: FC<{ movie: IMovie,similarMovies:IMovie[]}> = ({
 	return (
 		<Meta title={movie.title} description={`Смотреть на PornPredator ${movie.title}`}>
 		<div className={styles.mainWrapper}>
-		<VideoPlayer videoSource={movie.videoUrl}></VideoPlayer>
+		<VideoPlayer videoSource={movie.videoUrl} poster={movie.poster}></VideoPlayer>
 		<Content movie={movie}></Content>
 		</div>
 		<div className='mt-3'>

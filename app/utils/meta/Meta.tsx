@@ -19,8 +19,14 @@ const Meta:FC<PropsWithChildren<ISeo>>= ({children,title,description,image=null}
 					<meta
 						itemProp='description'
 						name='description'
-						content={onlyText(description, 152)}
+						content={onlyText(description, 99)}
 					/>
+          <meta name='robots' content='ALL'/>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+          <meta name="rating" content="RTA-5042-1996-1400-1577-RTA" />
+          <meta httpEquiv="Content-Language" content="ru"/>
+          <meta name="keywords" content="порно, секс, порнуха, порно видео, порно онлайн, смотреть порно,порнушка,порнография"/>
+          <meta name="description" content="PornPredator - смотри сочное и новое порно видео каждый день в HD качестве! Мы отбираем для вась только лучшие ролики отборной порнухи."/>
 					<link rel='canonical' href={currentUrl} />
 					<meta property='og:locale' content='ru' />
 					<meta property='og:title' content={titleMerge(title)} />
@@ -29,7 +35,7 @@ const Meta:FC<PropsWithChildren<ISeo>>= ({children,title,description,image=null}
 					<meta property='og:site_name' content={siteName} />
 					<meta
 						property='og:description'
-						content={onlyText(description, 197)}
+						content={onlyText(description, 99)}
 					/>
       </>
 

@@ -6,6 +6,7 @@ import {  IMovie } from '@/shared/types/movie.types'
 
 import { MovieService } from '@/services/movie.service'
 import { useEffect, useState } from 'react'
+import Meta from '@/utils/meta/Meta'
 
 
 const HomePage: NextPage<{ movies: IMovie[] }> = ({ movies}) => {
@@ -43,6 +44,7 @@ const HomePage: NextPage<{ movies: IMovie[] }> = ({ movies}) => {
 	}
 	},[fetching])
 	return (
+		<Meta title="Новые видео" description='Свежее порно на PornPredator'>
 		<div>
 		{/* <Search></Search> */}
 		<Catalog
@@ -51,6 +53,7 @@ const HomePage: NextPage<{ movies: IMovie[] }> = ({ movies}) => {
 			description=""
 		/>
 		</div>
+		</Meta>
 	)
 }
 

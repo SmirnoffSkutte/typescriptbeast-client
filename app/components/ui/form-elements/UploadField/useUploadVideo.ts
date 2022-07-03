@@ -9,11 +9,11 @@ type TypeUpload = (
 	onChange: (...event: any[]) => void,
 	folder?: string
 ) => {
-	uploadImage: (e: ChangeEvent<HTMLInputElement>) => Promise<void>
+	uploadVideo: (e: ChangeEvent<HTMLInputElement>) => Promise<void>
 	isLoading: boolean
 }
 
-export const useUpload: TypeUpload = (onChange, folder) => {
+export const useUploadVideo: TypeUpload = (onChange, folder) => {
 	const [isLoading, setIsLoading] = useState(false)
 
 	const { mutateAsync } = useMutation(
@@ -24,12 +24,12 @@ export const useUpload: TypeUpload = (onChange, folder) => {
 				onChange(data[0].url)
 			},
 			onError(error) {
-				toastError(error, 'Загрузка картинки')
+				toastError(error, 'Загрузка видео')
 			},
 		}
 	)
 
-	const uploadImage = useCallback(
+	const uploadVideo = useCallback(
 		async (e: ChangeEvent<HTMLInputElement>) => {
 			setIsLoading(true)
 			const files = e.target.files
@@ -46,5 +46,5 @@ export const useUpload: TypeUpload = (onChange, folder) => {
 		[mutateAsync]
 	)
 
-	return useMemo(() => ({ uploadImage, isLoading }), [uploadImage, isLoading])
+	return useMemo(() => ({ uploadVideo, isLoading }), [uploadVideo, isLoading])
 }

@@ -20,6 +20,7 @@ import { useAdminActors } from './useAdminActors'
 import { useAdminGenres } from './useAdminGenres'
 import { useAdminTags } from './useAdminTags'
 import { useMovieEdit } from './useMovieEdit'
+import UploadVideo from '@/components/ui/form-elements/UploadField/UploadVideo'
 
 const DynamicSelect = dynamic(() => import('@/ui/select/Select'), {
 	ssr: false,
@@ -148,7 +149,7 @@ const MovieEdit: FC = () => {
 							}}
 						/> 
 
-						<Controller
+						{/* <Controller
 							name="videoUrl"
 							control={control}
 							defaultValue=""
@@ -164,6 +165,27 @@ const MovieEdit: FC = () => {
 									onChange={onChange}
 									style={{ marginTop: -25 }}
 									isNoImage
+								/>
+							)}
+							rules={{
+								required: 'Видео обязательно!',
+							}}
+						/> */}
+						<Controller
+							name="videoUrl"
+							control={control}
+							defaultValue=""
+							render={({
+								field: { value, onChange },
+								fieldState: { error },
+							}) => (
+								<UploadVideo
+									placeholder="Видео"
+									error={error}
+									folder="movies"
+									image={value}
+									onChange={onChange}
+									style={{ marginTop: -25 }}
 								/>
 							)}
 							rules={{

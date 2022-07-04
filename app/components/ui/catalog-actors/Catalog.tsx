@@ -1,6 +1,4 @@
 import { FC } from 'react'
-
-import GalleryItem from '@/components/ui/gallery/GalleryItem'
 import Description from '../heading/Descsription'
 import Heading from '@/components/ui/heading/Heading'
 
@@ -10,6 +8,7 @@ import { getActorUrl} from 'config/url.config'
 
 import styles from './Catalog.module.scss'
 import { ICatalog } from './catalog.interface'
+import GalleryItemActor from '../gallery/GalleryItemActor'
 
 const ActorCatalog: FC<ICatalog> = ({ title, description, actors }) => {
 	return (
@@ -21,7 +20,7 @@ const ActorCatalog: FC<ICatalog> = ({ title, description, actors }) => {
 
 			<section className={styles.movies}>
 				{actors.map((actor) => (
-					<GalleryItem
+					<GalleryItemActor
 						key={actor._id}
 						variant="horizontal"
 						item={{

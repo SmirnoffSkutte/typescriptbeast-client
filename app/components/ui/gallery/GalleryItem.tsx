@@ -1,6 +1,6 @@
 import cn from 'classnames'
 import Link from 'next/link'
-import { FC, useEffect, useState } from 'react'
+import { FC, useEffect } from 'react'
 import styles from './Gallery.module.scss'
 import { IGalleryItemProps } from './gallery.interface'
 import Image from 'next/image'
@@ -9,12 +9,7 @@ import noneImg from '../../../assets/images/none.jpg'
 const GalleryItem: FC<IGalleryItemProps> = ({ item, variant }) => {
 	// let isLoaded=false
 	// const [image,setImage]=useState('')
-	// useEffect(()=>{
-	// 	isLoaded=true
-	// 	const path=(API_SERVER_FILES+item.posterPath)
-	// 	console.log(path)
-	// 	setImage(path)
-	// },[])
+	
 	return (
 		<Link href={item.url}>
 			<a
@@ -24,29 +19,22 @@ const GalleryItem: FC<IGalleryItemProps> = ({ item, variant }) => {
 					[styles.vertical]: variant === 'vertical',
 				})}
 			>
-				<div className='block'>
-					
-					<Image
-					alt={item.name}
-					src={item.posterPath || noneImg}
-					// width={250}
-				    // height={250}
-					draggable={false}
-					layout='fill'
-					objectFit='fill'
-					priority
-					/> 
-					
-				
 				{item.content && (
-					<div className={styles.content}>
-						{item.content.subTitle && (
-							<div className={styles.subTitle}> {item.content.subTitle}</div>
-						)}
-						<div className={styles.title}>{item.content.title}</div>
+					<div className={styles.subTitleBlock}>
+						<div className={styles.subTitle}><div className={styles.subcont}>{item.content.subTitle}</div></div>
+						<div className={styles.time}><div className={styles.subtime}>{item.content.duration}</div></div>
 					</div>
 				)}
-				</div>
+				
+				<Image alt={item.name} src={item.posterPath || noneImg} draggable={false} layout='fill' objectFit='fill' priority/>
+				
+				
+
+				{item.content && (
+					<div className={styles.content}>
+						{item.content.title}
+					</div>
+				)}
 			</a>
 		</Link>
 	)

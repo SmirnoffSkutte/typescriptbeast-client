@@ -5,6 +5,7 @@ export interface IGalleryItem {
 	content?: {
 		title: string
 		subTitle?: string
+		duration?:string
 	}
 }
 

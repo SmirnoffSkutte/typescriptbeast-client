@@ -7,9 +7,9 @@ export const useTagsMenu = () =>{
 
     const queryData = useQuery('tags menu',()=> TagService.getAll(),
     {
-        select:({data}) => data.map(actor => ({
-            link:getTagUrl(actor.slug),
-            title: actor.name
+        select:({data}) => data.map(tag => ({
+            link:getTagUrl(tag.slug),
+            title: tag.name
         } as IMenuItem)),
 
         onError(error){

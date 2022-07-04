@@ -40,7 +40,7 @@ const ActorsPage: NextPage<{ actors: IActor[] }> = ({ actors }) => {
 		<ActorCatalog
 			actors={data || []}
 			title="Актеры"
-			description=""
+			description="Порноактеры на PornPredator"
 		/>
 		</>
 	)

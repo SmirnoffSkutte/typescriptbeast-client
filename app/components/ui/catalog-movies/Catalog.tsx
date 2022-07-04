@@ -30,7 +30,9 @@ const Catalog: FC<ICatalog> = ({ title, description, movies }) => {
 							url: getMovieUrl(movie.slug),
 							content: {
 								title: movie.title,
-								subTitle:`👁 ${movie.countOpened}`
+								subTitle:`👁 ${movie.countOpened}`,
+								duration:`${movie.parameters.duration} мин.`
+
 							},
 						}}
 					/>

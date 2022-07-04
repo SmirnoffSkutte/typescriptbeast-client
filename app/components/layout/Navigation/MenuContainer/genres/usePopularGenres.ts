@@ -10,7 +10,7 @@ export const usePopularGenres = () =>{
         select:({data}) => data.map(genre => ({
             link:getGenreUrl(genre.slug),
             title: genre.name
-        } as IMenuItem)),
+        } as IMenuItem)).sort(),
 
         onError(error){
             //errors

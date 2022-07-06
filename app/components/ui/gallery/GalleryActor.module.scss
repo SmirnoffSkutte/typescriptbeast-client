@@ -11,10 +11,19 @@
 }
 
 
+.actorWrapper{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
 
 .item {
 	@apply relative transition-transform flex items-end shadow-lg rounded-layout overflow-hidden;
 	flex: 0 0 auto;
+	outline: 1px solid gray;
 	
 	&.vertical {
 		@apply mr-4 last:mr-0 w-1/5;
@@ -24,18 +33,8 @@
 
 	&.horizontal {
 		@apply mb-8;
-		width: 100%;
-        // height: 236px;
-		height: 400px;
-		// @media screen and (max-width:576px) {
-		// 	width: 100%;
-		//   }
-		// @media screen and (min-width:577px) {
-		// 	width: 45%;
-		//   }
-		// @media screen and (min-width:960px) {
-		// 	width: 33%;
-		// }
+		width: 240px;
+        height:300px;
 	}
 
 	

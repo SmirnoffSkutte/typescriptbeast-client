@@ -17,7 +17,7 @@ const ActorCatalog: FC<ICatalog> = ({ title, description, actors }) => {
 			{description && (
 				<Description text={description} className={styles.description} />
 			)}
-
+			<div className={styles.catalogWrapper}>
 			<section className={styles.movies}>
 				{actors.map((actor) => (
 					<GalleryItemActor
@@ -35,7 +35,7 @@ const ActorCatalog: FC<ICatalog> = ({ title, description, actors }) => {
 					/>
 				))}
 			</section>
-
+			</div>
 			{/* <div className="text-center">
 				<button className={styles.button}>Load more</button>
 			</div> */}

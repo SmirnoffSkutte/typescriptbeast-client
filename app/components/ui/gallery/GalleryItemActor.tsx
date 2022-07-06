@@ -16,6 +16,7 @@ const GalleryItemActor: FC<IGalleryItemProps> = ({ item, variant }) => {
 	// 	setImage(path)
 	// },[])
 	return (
+		<div className={styles.actorWrapper}>
 		<Link href={item.url}>
 			<a
 				className={cn(styles.item, {
@@ -49,6 +50,7 @@ const GalleryItemActor: FC<IGalleryItemProps> = ({ item, variant }) => {
 				</div>
 			</a>
 		</Link>
+		</div>
 	)
 }
 

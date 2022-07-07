@@ -44,12 +44,12 @@ const HomePage: NextPage<{ movies: IMovie[] }> = ({ movies}) => {
 	}
 	},[fetching])
 	return (
-		<Meta title="Новые видео" description='Свежее порно на PornPredator'>
+		<Meta title="Новые фильмы" description='Новые фильмы'>
 		<div>
 		{/* <Search></Search> */}
 		<Catalog
 			movies={data || []}
-			title="Новые видео"
+			title="Новые фильмы"
 			description=""
 		/>
 		</div>

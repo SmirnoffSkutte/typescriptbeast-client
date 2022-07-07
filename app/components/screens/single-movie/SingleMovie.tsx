@@ -13,7 +13,7 @@ const SingleMovie: FC<{ movie: IMovie,similarMovies:IMovie[]}> = ({
 	useUpdateCountOpened(movie.slug)
 
 	return (
-		<Meta title={movie.title} description={`Смотреть на PornPredator ${movie.title}`}>
+		<Meta title={movie.title} description={`Смотреть на typescriptbeast.ru ${movie.title}`}>
 		<div className={styles.mainWrapper}>
 		<VideoPlayer videoSource={movie.videoUrl} poster={movie.poster}></VideoPlayer>
 		<Content movie={movie}></Content>
@@ -27,8 +27,7 @@ const SingleMovie: FC<{ movie: IMovie,similarMovies:IMovie[]}> = ({
 		</div>
 		<div className='border-t-2 border-orange-300'>
 			<h3 className='text-white'>
-			Заходя на этот сайт вы подтверждаете, что являетесь совершеннолетним и что посещение этого веб-сайта не является нарушением законодательства.
-Все ролики на сайте - постановочные, всем моделям больше 18 лет, все видео взяты из открытых интернет источников.Мы соблюдаем 18 U.S.C. 2257 RKRCS, согласно которому, все лица (актеры, актрисы) достигли 18 лет на момент съемок.Если вы считаете, что на сайте есть фотографии или видео нарушающие закон,то пишите на почту natusvivere@proton.me,мы обязательно рассмотрим вашу жалобу/претензию.По поводу рекламы/предложений и т.д также пишите на natusvivere@proton.me
+			Подвал сайта
 			</h3>
 		</div>
 		</Meta>

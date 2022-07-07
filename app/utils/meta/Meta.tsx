@@ -25,8 +25,8 @@ const Meta:FC<PropsWithChildren<ISeo>>= ({children,title,description,image=null}
           <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
           <meta name="rating" content="RTA-5042-1996-1400-1577-RTA" />
           <meta httpEquiv="Content-Language" content="ru"/>
-          <meta name="keywords" content="порно, секс, порнуха, порно видео, порно онлайн, смотреть порно,порнушка,порнография"/>
-          <meta name="description" content="PornPredator - смотри сочное и новое порно видео каждый день в HD качестве! Мы отбираем для вась только лучшие ролики отборной порнухи."/>
+          <meta name="keywords" content="фильмы,сериалы,смотреть фильмы и сериалы"/>
+          <meta name="description" content="Дефолтное описание сайта"/>
 					<link rel='canonical' href={currentUrl} />
 					<meta property='og:locale' content='ru' />
 					<meta property='og:title' content={titleMerge(title)} />

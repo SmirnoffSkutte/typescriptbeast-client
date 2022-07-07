@@ -44,10 +44,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 	try {
 		const { data: movie } = await MovieService.getBySlug(String(params?.slug))
 
-		const genPage=randomNumber(1,5)
+		// const genPage=randomNumber(1,5)
 
 		const responseSimilarMovies = await MovieService.getByGenres(
-			movie.genres.map((g) => g._id),genPage
+			movie.genres.map((g) => g._id),1
 		)
 
 		const similarMovies = responseSimilarMovies.data

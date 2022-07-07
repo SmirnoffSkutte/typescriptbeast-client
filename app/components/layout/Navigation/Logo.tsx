@@ -6,7 +6,7 @@ const Logo:FC = () => {
   return (
       <Link href='/'>
           <a className='mb-10 block'>
-              <Image src={logoImage} width={250} height={34} alt='PornPredator' draggable={false}/>
+              <Image src={logoImage} width={250} height={34} alt='logo' draggable={false}/>
           </a>   
       </Link>
   )

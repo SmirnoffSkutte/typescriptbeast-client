@@ -4,7 +4,7 @@ import MenuContainer from './MenuContainer/MenuContainer'
 import styles from './Navigation.module.scss'
 const Navigation:FC = () => {
   return (
-    <div>
+    <nav>
 
       <div className={styles.logo}>
         <Logo/>
@@ -14,7 +14,7 @@ const Navigation:FC = () => {
         <MenuContainer/>
       </div>
 
-    </div>
+    </nav>
   )
 }
 

@@ -9,17 +9,12 @@ import Link from 'next/link'
 const MenuContainer:FC = () => {
   return (
     <div className={styles.menusFlex}>
-      {/* <Menu menu={firstMenu}/> */}
-      <div>
+      <Menu menu={userMenu}/>
+      <TagMenu/>
+      <GenreMenu/>
       <Link href={`/actorsPage`}>
         <a className={styles.actor}>Актеры</a>
       </Link>
-      </div>
-
-      <GenreMenu/>
-      <TagMenu/>
-      {/* <ActorMenu/> */}
-      <Menu menu={userMenu}/>
     </div>
   )
 }

@@ -7,6 +7,7 @@ import {  IMovie } from '@/shared/types/movie.types'
 import { MovieService } from '@/services/movie.service'
 import { useEffect, useState } from 'react'
 import Meta from '@/utils/meta/Meta'
+import Search from '@/components/layout/Search/Search'
 
 
 const HomePage: NextPage<{ movies: IMovie[] }> = ({ movies}) => {
@@ -46,7 +47,7 @@ const HomePage: NextPage<{ movies: IMovie[] }> = ({ movies}) => {
 	return (
 		<Meta title="Новые фильмы" description='Новые фильмы'>
 		<div>
-		{/* <Search></Search> */}
+		<Search></Search>
 		<Catalog
 			movies={data || []}
 			title="Новые фильмы"

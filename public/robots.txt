@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /favoritesPage/*
+Disallow: /manage/*
+Disallow: /auth/*
+Disallow: /api/*
+Disallow: /profile/*
+Disallow: /404/*
+Sitemap: https://typescriptbeast.ru/sitemap.xml
+Host: https://typescriptbeast.ru

@@ -15,12 +15,6 @@ const AuthItems: FC = () => {
 		<>
 			{user ? (
 				<>
-					{/* <MenuItem
-						item={{
-							link: '/profile',
-							title: 'Профиль',
-						}}
-					/> */}
 					<LogoutButton />
 					<MenuItem item={{link:'/favoritesPage',title:'Избранное'}}/>
 				</>

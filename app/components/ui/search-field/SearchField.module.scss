@@ -8,7 +8,7 @@
 	}
 
 	> input {
-		@apply text-white placeholder:text-gray-600 block w-full bg-transparent outline-none;
+		@apply text-white placeholder:text-white block w-full bg-transparent outline-none;
 	}
 
 	&:focus-within {
